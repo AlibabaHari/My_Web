@@ -28,13 +28,18 @@ use App\user_session;
 class AdminController extends Controller
 {
 	public function getIndex(){
+		if(Session('user_session')){
+		$email =Session::get('user_session')->email;
+		$user = User::where('email',$email)->first();
 		$bill_waiting = Bill::where('trang_thai','Chờ xác nhận')->get();
 		$bill_check = Bill::where('trang_thai','Đã xác nhận')->get();
 		$bill_moving = Bill::where('trang_thai','Đang vận chuyển')->get();
 		$bill_done = Bill::where('trang_thai','Đã thanh toán')->get();
+		return view ('page.dashboard',compact('bill_waiting','bill_check','bill_moving','bill_done','user'));
+		
+		}
 
-
-		return view ('page.dashboard',compact('bill_waiting','bill_check','bill_moving','bill_done'));
+		
 	}
 	public function xemChiTietBill($id){
 

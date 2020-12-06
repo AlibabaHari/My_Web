@@ -17,21 +17,26 @@
       </div>
       <div class="card-content collapse show">
         <div class="card-body">
-        		
-         
+
+           <p class="card-text">Địa chỉ mặc định: {{$customer ->address}}  </p>
+           <p class="card-text">Địa chỉ mới (nếu có): {{$customer ->address_another}}  </p>
+           <p class="card-text">SDT: {{$customer ->phone}}  </p>
+           <p class="card-text">Nhắn nhủ: {{$customer ->note}}  </p>
+           <p class="card-text">SDT khác (nếu có): {{$customer ->sdt_khac}}  </p>
 
         
           <div class="table-responsive">
             <table class="table">
               <thead>
                 <tr >
-                	<th>STT</th>
+                	<th style="width:5%">STT</th>
 
             
-                  <th style="width:20%">Hình ảnh</th>
-                  <th style="width:30%">Tên</th>
-                  <th style="width:20%">Giá</th>
-                  <th style="width:5%">Số lượng</th>
+                  <th style="width:10%">Hình ảnh</th>
+                  <th style="width:20%">Tên</th>
+                  <th style="width:10%">Giá</th>
+                  <th style="width:10%">Số lượng</th>
+                  <th style="width:10%">Thao tác</th>
                  
 
                 </tr>

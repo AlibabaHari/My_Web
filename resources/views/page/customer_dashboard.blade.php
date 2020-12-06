@@ -58,7 +58,7 @@
                   <th style="width: 5%">Mã bill</th>
                   <th style="width: 10%">Mã khách</th>
                   <th style="width: 20%">Ngày đặt</th>
-                  <th style="width: 5%">Trạng thái</th>
+                  <th style="width: 20%">Trạng thái</th>
                   <th style="width: 10%">Tổng thanh toán</th>
                   <th style="width: 50%">Thao tác</th>
 

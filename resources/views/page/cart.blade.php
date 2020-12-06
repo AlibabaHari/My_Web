@@ -107,23 +107,21 @@
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12 smt-40 xmt-40">
                                     <div class="htc__cart__total">
-                                        <h6>cart total</h6>
+                                        <h6>Tổng thanh toán </h6>
                                         <div class="cart__desk__list">
                                         		
                                             <ul class="cart__desc">
                                                 <li>cart total</li>
-                                                <li>tax</li>
-                                                <li>shipping</li>
+                                           
                                             </ul>
                                             <ul class="cart__price">
-                                                <li>{{$totalPrice}}</li>
-                                                <li>{{$totalPrice}}</li>
-                                                <li>0</li>
+                                                <li>{{number_format($totalPrice)}}</li>
+                                            
                                             </ul>
                                         </div>
                                         <div class="cart__total">
                                             <span>Tổng thanh toán</span>
-                                            <span>{{$totalPrice}}</span>
+                                            <span>{{number_format($totalPrice)}}</span>
                                         </div>
                                           <div class="buttons-cart checkout--btn">
                                          

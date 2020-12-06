@@ -102,6 +102,10 @@
                                     </div>
                                     <div class="single-item__content">
                                         <a href="#">{{$product['item']['name']}}</a>
+                                        <span class="price">
+                                        <a href="#">Số lượng: {{$product['qty']}}</a>
+                                    </span>
+
                                         @if(!$product['item']['promotion_price'])
                                         <span class="price">{{number_format($product['item']['unit_price'])}} VND</span>
                                         @else
@@ -152,14 +156,14 @@
                     <div class="col-md-12">
                         <div class="ht__brand__inner">
                             <ul class="brand__list owl-carousel clearfix">
-                                <li><a href="#"><img src="images/brand/1.png" alt="brand images"></a></li>
-                                <li><a href="#"><img src="images/brand/2.png" alt="brand images"></a></li>
-                                <li><a href="#"><img src="images/brand/3.png" alt="brand images"></a></li>
-                                <li><a href="#"><img src="images/brand/4.png" alt="brand images"></a></li>
-                                <li><a href="#"><img src="images/brand/5.png" alt="brand images"></a></li>
-                                <li><a href="#"><img src="images/brand/5.png" alt="brand images"></a></li>
-                                <li><a href="#"><img src="images/brand/1.png" alt="brand images"></a></li>
-                                <li><a href="#"><img src="images/brand/2.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="source/images/brand/1.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="source//images/brand/2.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="source/images/brand/3.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="source//images/brand/4.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="source//images/brand/5.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="source//images/brand/5.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="source//images/brand/1.png" alt="brand images"></a></li>
+                                <li><a href="#"><img src="source//images/brand/2.png" alt="brand images"></a></li>
                             </ul>
                         </div>
                     </div>

@@ -47,23 +47,24 @@ class PageController extends Controller
     	return view('page.chitiet',compact('sanpham','listhinhanh','newproduct'));
     }
     public function getLoaiSp($type){
-      $sp_theoLoai = Product::where('id_type',$type)->paginate(9);
-      $thuoctinh_theoLoai = Product::where('id_type',$type)->get();
-      $tien_theoLoai = Product::where('unit_price','min')->get();
+      $sp_theoLoai = Product::where('trang_thai','Hiện')->where('id_type',$type)->paginate(9);
+      $thuoctinh_theoLoai = Product::where('trang_thai','Hiện')->where('id_type',$type)->get();
+      $tien_theoLoai = Product::where('trang_thai','Hiện')->where('unit_price','min')->get();
       $thuoctinh = thuoctinh::where('id_loai',$type)->get();
       $product_type = ProductType::all();
+       $sale_product = Product::where('trang_thai','Hiện')->where('promotion_price','<>',0)->paginate(4);
       $ten_loai = ProductType::where('id',$type)->first();
      
       return view('page.ProductGrid',compact('sp_theoLoai',
         'tien_theoLoai',
         'thuoctinh',
         'product_type',
-        'ten_loai'));
+        'ten_loai','sale_product'));
     }
     public function them_giohang(Request $req,$id){
        $soluong = $req->soluong;
 
-       $product = Product::find($id);
+       $product = Product::where('trang_thai','Hiện')->find($id);
         $oldcart = Session('cart')? Session::get('cart'):null;
         $cart = new cart($oldcart);
         for($i=1; $i<= $soluong;$i++){
@@ -77,7 +78,7 @@ class PageController extends Controller
 
     }
     public function themgiohang(Request $req, $id){
-      $product = Product::find($id);
+      $product = Product::where('trang_thai','Hiện')->find($id);
       $oldcart = Session('cart')? Session::get('cart'):null;
       $cart = new cart($oldcart);
       
